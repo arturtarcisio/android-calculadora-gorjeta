@@ -11,6 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
         tools:context=".MainActivity">
@@ -37,6 +38,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputValor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_valor_text_input"
@@ -44,7 +46,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textViewPorcentagem"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -63,7 +65,7 @@
             android:text="@string/Gorjeta"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewPorcentagem" />
 
         <TextView
             android:id="@+id/textView9"
@@ -77,7 +79,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textViewGorjeta"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -85,14 +87,16 @@
             android:layout_marginTop="16dp"
             android:background="#FFD479"
             android:padding="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:text="@string/gorjeta_valor"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView8"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewPorcentagem" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/textViewTotal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -100,6 +104,8 @@
             android:layout_marginTop="16dp"
             android:background="#FFD479"
             android:padding="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:text="@string/gorjeta_valor"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -107,14 +113,15 @@
             app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
         <SeekBar
-            android:id="@+id/seekBar2"
+            android:id="@+id/seekBarPorcentagem"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
+            android:max="100"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textViewPorcentagem"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
